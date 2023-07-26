@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "MD to Cubari",
+    "version": "1.0",
+
+    "description": "Redirects mangadex's title and chapter pages to cubari",
+
+    "background": {
+        "scripts": [ "src/bg.js" ],
+        "persistent": false
+    },
+
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+
+        "*://*.mangadex.org/*"
+    ]
+}
