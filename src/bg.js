@@ -21,7 +21,7 @@ browser.webRequest.onBeforeRequest.addListener((req) => {
 browser.webRequest.onBeforeRequest.addListener(async (req) => {
     const id = getHashFromUrl(req.url);
 
-    const { data } = await fetch(`${API_MANGADEX_BASE_URL}/${id}`).then(res => res.json());
+    const { data } = await fetch(`${API_MANGADEX_BASE_URL}/chapter/${id}`).then(res => res.json());
 
     const chapter = data.attributes.chapter;
     const manga = data.relationships.find(rel => rel.type === "manga");
